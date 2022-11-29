@@ -100,10 +100,11 @@ public class quiz {
             if(i==4){
                 System.out.println(q4);
                 userA = answers.nextLine();
-                if(correct4(userA) == true || userA == Integer.toString(-6)){
+                if( userA.equals("-6") || correct4(userA) == true ){
                     numCorr++;
                 } else {
                     System.out.println("Wrong");
+                    System.out.println(userA);
                 }
             }
 
@@ -116,6 +117,13 @@ public class quiz {
         } else {
             System.out.println("You got" + numCorr + " out of " + qNum + " correct, you did ok!");
         }
+    }
+
+    public String toString()
+    {
+        String returnString = "Answer key: " + "\n" +  "question 1 answer is " + a1 + "\n" + "question 2 answer is " + a2 + "\n" + "question 3 answer is " + a3 + "\n" + "question 4 answer is " + a4 + " or -6";
+
+        return returnString;
     }
 
 
