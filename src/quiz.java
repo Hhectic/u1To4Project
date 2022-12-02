@@ -1,4 +1,7 @@
 import java.util.Scanner;
+/*The quiz class represents a quiz. A quiz is represented with questions, user answers, the actual answers, number of questions, and
+number of questions answered correctly
+ */
 public class quiz {
     Scanner answers = new Scanner(System.in);
 
@@ -14,6 +17,9 @@ public class quiz {
     private String a3;
     private String a4;
 
+    /*Constructor for the quiz class. This creates a new instance of a quiz given no parameters
+
+     */
     public quiz(){
         qNum = (int)(Math.random()*5 + 1);
         numCorr = 0;
@@ -104,7 +110,6 @@ public class quiz {
                     numCorr++;
                 } else {
                     System.out.println("Wrong");
-                    System.out.println(userA);
                 }
             }
 
