@@ -97,7 +97,7 @@ public class quiz {
             if(i==3){
                 System.out.println(q3);
                 userA = answers.nextLine();
-                if(correct3(userA) == true){
+                if(correct3(userA) == true || userA.toLowerCase().equals("us") || userA.toLowerCase().equals("united states") || userA.toLowerCase().equals("united states of america")){
                     numCorr++;
                 } else {
                     System.out.println("Wrong");
